@@ -12,11 +12,11 @@ With the growing need to optimize sustainable development and the efficiency of 
 
 To keep the number of sensors to a minimum, machine learning algorithms could be trained to predict the energy usage of devices by the effect that they have on the main electrical input, as well as other variables such as temperature and business-specific data.
 
-The aim of this project is to use the electrical measurements from the main electric meter as well as temperature and time data to predict the electric usage of the devices from a standardized restaurant chain. This way, only all sensors should be installed in a single site, which would be the basis for the construction of the predictive model.
+This project aims to use the electrical measurements from the main electric meter as well as temperature and time data to predict the electric usage of the devices from a standardized restaurant chain. This way, only all sensors should be installed in a single site, which would be the basis for the construction of the predictive model.
 
-Followin the idea, from April 2018 to November 2019 data was collected from the site that we used as basis by installing meters on several groups of devices, as well as on big devices. The devices were the Lavaloza, Lighting, Refrigeration 1 and 2, Contacts & Air conditioning and Ventilation.
+Following the idea, from April 2018 to November 2019 data was collected from the site that we used as a basis by installing meters on several groups of devices, as well as on big devices. The devices were the Lavaloza, Lighting, Refrigeration 1 and 2, Contacts & Air conditioning and Ventilation.
 
-The measurements provided by the meter on the main input (power meter) are current, frequency and voltage, and with them other parameters such as power, reactive power, power factor and energy can be calculated.
+The measurements provided by the meter on the main input (power meter) are current, frequency and voltage, and with the other parameters such as power, reactive power, power factor and energy can be calculated.
 
 On the other hand, the meters installed on the other devices only measure current and use the voltage measurement from the power meter on the main input to transform it into power and energy.
 
@@ -34,7 +34,7 @@ Two models were tested for each device and are discussed below: **Gradient Boost
 
 ### Gradient Boosting Regressor
 
-A Gradient Boosting Regressor is a comprehensive Supervised Machine Learning Algorithm which is based on decition trees that recursevely partitions the inputs by using feature threshold functions. Unlike other similar methods like random forests, boosting learn is a sequential manner. This means that each member of the asamble is an expert on its predecesor error, making it a very strong predictor on non linear functions. Also, it can handdle very well multiple meter scales in data.
+A Gradient Boosting Regressor is a comprehensive Supervised Machine Learning Algorithm which is based on decision trees that recursively partitions the inputs by using feature threshold functions. Unlike other similar methods like random forests, boosting learn is a sequential manner. This means that each member of the assemble is an expert on its predecessor error, making it a very strong predictor on non-linear functions. Also, it can handle very well multiple meter scales in data.
 
 <img src="http://uc-r.github.io/public/images/analytics/gbm/boosted_stumps.gif"/>
 
@@ -145,5 +145,9 @@ Model for Tablero E
 ```
 The ***Gradient Boosting Regressor*** was chosen as it was easier to tune and returned more accurate results than the MLP. Also, it is harder to know which features are more relevant for a neural network, so the model becomes harder to interpret and explain.
 
-Results
-https://app.powerbi.com/view?r=eyJrIjoiZDM0MjMyZjEtODg0Ny00ODc5LThlY2EtYmE3NjE0YzBmOTliIiwidCI6ImQ0MmQxMThhLTMxNjQtNDY3MS1hZjk4LTZkMzkwNTljZTcwYiJ9
+## Results Visualization with [Tableau](https://github.com/Axioma42/ETL_project/blob/master/etl.ipynb) and [Power Bi](https://app.powerbi.com/view?r=eyJrIjoiZDM0MjMyZjEtODg0Ny00ODc5LThlY2EtYmE3NjE0YzBmOTliIiwidCI6ImQ0MmQxMThhLTMxNjQtNDY3MS1hZjk4LTZkMzkwNTljZTcwYiJ9)
+
+<p align="center">
+  <img src="Images/tableau.jpg" width="350" title="Visualization">
+  <img src="Images/powerBI.jpg" width="350" alt="accessibility text">
+</p>
