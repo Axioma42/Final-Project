@@ -44,6 +44,13 @@ A Gradient Boosting Regressor is a comprehensive Supervised Machine Learning Alg
 - Afterwards, the GridSearchCV was used to estimate the best hyperparamenters to use in each single device, and the results were stored to use in the final models.
 - The scores for the training and test sets are shown below:
 - The feature importances of each model are:
+<p align="center">
+  <img src="Images/Lighting (Tab A).png" width="350" title="feature_importances">
+  <img src="Images/Refrigeration (Tab B).png" width="350" alt="accessibility text">
+  <img src="Images/Refrigeration 2 (Tab C).png" width="350" alt="accessibility text">
+  <img src="Images/Contacts (Tab D).png" width="350" alt="accessibility text">
+  <img src="Images/Air conditioning and ventilation (Tab E).png" width="350" alt="accessibility text">
+</p>
 
 For every model the most important feature is the current of the main input of electricity, while the power factor also plays an important role in all of them.
 
@@ -57,9 +64,9 @@ Time-related data seems to be especially important in the Contacts and Refrigera
 
 A similar process was repeated for the multilayer perceptron, in which a GridSearch was run for every device and the data was trained with the training set and tested on the test set.
 
-The scores for the neural network are shown below.
+The scores for the neural network are shown below:
 
-The Gradient Boosting Regressor was chosen as it was easier to tune and returned more accurate results than the MLP. Also, it is harder to know which features are more relevant for a neural network, so the model becomes harder to interpret and explain.
+The ***Gradient Boosting Regressor*** was chosen as it was easier to tune and returned more accurate results than the MLP. Also, it is harder to know which features are more relevant for a neural network, so the model becomes harder to interpret and explain.
 
 Results
 https://app.powerbi.com/view?r=eyJrIjoiZDM0MjMyZjEtODg0Ny00ODc5LThlY2EtYmE3NjE0YzBmOTliIiwidCI6ImQ0MmQxMThhLTMxNjQtNDY3MS1hZjk4LTZkMzkwNTljZTcwYiJ9
