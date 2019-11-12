@@ -43,6 +43,45 @@ A Gradient Boosting Regressor is a comprehensive Supervised Machine Learning Alg
 - As a first step for building a GridSearch was instantiated with the hyperparameters n_estimators, max_depth and learning_rate.
 - Afterwards, the GridSearchCV was used to estimate the best hyperparamenters to use in each single device, and the results were stored to use in the final models.
 - The scores for the training and test sets are shown below:
+```python
+model_list_gbr= []
+counter = 0
+for column in devices_to_train:
+    y = y_train[column].values.reshape(-1,1)
+    gbr = GradientBoostingRegressor(max_depth = model_best_params[counter]["max_depth"],
+                                    n_estimators = model_best_params[counter]["n_estimators"],
+                                    learning_rate= model_best_params[counter]["learning_rate"]).fit(X_train_scaled, y)
+    model_list_gbr.append(gbr)
+    counter += 1
+    print("\nModel for {}".format(column))
+    print(gbr.score(X_train_scaled, y_train[column].values.reshape(-1,1)))
+    print(gbr.score(X_test_scaled, y_test[column].values.reshape(-1,1)))
+```
+```
+Model for Lavaloza
+0.8753471688006463
+0.7920040347432294
+
+Model for Tablero A
+0.988797678673449
+0.9693845137660599
+
+Model for Tablero B
+0.8046995456361667
+0.6383824593295103
+
+Model for Tablero C
+0.8764556172402954
+0.646063440888792
+
+Model for Tablero D
+0.9254452853783287
+0.7382066964653148
+
+Model for Tablero E
+0.97738823724776
+0.9520984794830925
+```
 - The feature importances of each model are:
 <p align="center">
   <img src="Images/Lighting (Tab A).png" width="350" title="feature_importances">
@@ -65,7 +104,45 @@ Time-related data seems to be especially important in the Contacts and Refrigera
 A similar process was repeated for the multilayer perceptron, in which a GridSearch was run for every device and the data was trained with the training set and tested on the test set.
 
 The scores for the neural network are shown below:
+```python
+model_list_mlp= []
+counter = 0
+for column in y_train.columns:
+    y = y_train[column].values.reshape(-1,1)
+    mlp = MLPRegressor(activation = model_best_params_mlp[counter]["activation"],
+                                    hidden_layer_sizes = model_best_params_mlp[counter]["hidden_layer_sizes"]).fit(X_train_scaled, y)
+    model_list_mlp.append(mlp)
+    counter += 1
+    print("Model for {}".format(column))
+    print(mlp.score(X_train_scaled, y_train[column].values.reshape(-1,1)))
+    print(mlp.score(X_test_scaled, y_test[column].values.reshape(-1,1)))
+    print("\n")
+```
+```
+Model for Lavaloza
+0.7875941512315989
+0.7678888485333678
 
+Model for Tablero A
+0.9644502926051871
+0.9597390672940306
+
+Model for Tablero B
+0.6167016892666015
+0.5813742006942623
+
+Model for Tablero C
+0.6681780764756081
+0.5745973136440363
+
+Model for Tablero D
+0.7056481445276216
+0.6504772503092348
+
+Model for Tablero E
+0.9231549473898574
+0.9207061758450231
+```
 The ***Gradient Boosting Regressor*** was chosen as it was easier to tune and returned more accurate results than the MLP. Also, it is harder to know which features are more relevant for a neural network, so the model becomes harder to interpret and explain.
 
 Results
