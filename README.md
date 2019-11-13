@@ -84,7 +84,8 @@ Model for Tablero E
 ```
 - The feature importances of each model are:
 <p align="center">
-  <img src="Images/Lighting (Tab A).png" width="350" title="feature_importances">
+  <img src="Images/Lavaloza.png" width="350" title="feature_importances">
+  <img src="Images/Lighting (Tab A).png" width="350" alt="accessibility text">
   <img src="Images/Refrigeration (Tab B).png" width="350" alt="accessibility text">
   <img src="Images/Refrigeration 2 (Tab C).png" width="350" alt="accessibility text">
   <img src="Images/Contacts (Tab D).png" width="350" alt="accessibility text">
