@@ -146,7 +146,7 @@ Model for Tablero E
 ```
 The ***Gradient Boosting Regressor*** was chosen as it was easier to tune and returned more accurate results than the MLP. Also, it is harder to know which features are more relevant for a neural network, so the model becomes harder to interpret and explain.
 
-## Results Visualization with [Tableau](https://public.tableau.com/profile/angieg10#!/vizhome/HistoriaConsumoEnerga/Historia1?publish=yes) and [Power Bi](https://app.powerbi.com/view?r=eyJrIjoiZDM0MjMyZjEtODg0Ny00ODc5LThlY2EtYmE3NjE0YzBmOTliIiwidCI6ImQ0MmQxMThhLTMxNjQtNDY3MS1hZjk4LTZkMzkwNTljZTcwYiJ9)
+## Results Visualization with [Tableau](https://public.tableau.com/profile/angieg10#!/vizhome/HistoriaConsumoEnerga2/Dashboard2?publish=yes) and [Power Bi](https://app.powerbi.com/view?r=eyJrIjoiZDM0MjMyZjEtODg0Ny00ODc5LThlY2EtYmE3NjE0YzBmOTliIiwidCI6ImQ0MmQxMThhLTMxNjQtNDY3MS1hZjk4LTZkMzkwNTljZTcwYiJ9)
 
 <p align="center">
   <img src="Images/tableau.jpg" width="350" title="Visualization">
