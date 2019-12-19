@@ -1,4 +1,4 @@
-<h1 align="center">Energy Comsumption Prediction Using Machine Learning</h1>
+<h1 align="center">Energy Consumption Prediction Using Machine Learning</h1>
 
 ## Authors
 
